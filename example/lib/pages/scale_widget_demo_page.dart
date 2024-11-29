@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:scalable_widget/scalable_widget.dart';
+
 import '../example_widget.dart';
 
 class ScaleWidgetDemoPage extends StatelessWidget {
@@ -19,4 +21,4 @@ class ScaleWidgetDemoPage extends StatelessWidget {
       ),
     );
   }
-} 
+}

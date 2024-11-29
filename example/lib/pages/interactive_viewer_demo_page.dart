@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../example_widget.dart';
 
 class InteractiveViewerDemoPage extends StatelessWidget {
@@ -13,12 +14,13 @@ class InteractiveViewerDemoPage extends StatelessWidget {
       ),
       body: Center(
         child: InteractiveViewer(
+          clipBehavior: Clip.none,
           boundaryMargin: const EdgeInsets.all(20.0),
-          minScale: 0.1,
-          maxScale: 4.0,
+          minScale: 0.01,
+          maxScale: 40.0,
           child: const ExampleWidget(),
         ),
       ),
     );
   }
-} 
+}

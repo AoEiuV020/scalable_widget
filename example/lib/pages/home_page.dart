@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'scale_widget_demo_page.dart';
+
 import 'interactive_viewer_demo_page.dart';
+import 'scale_widget_demo_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
