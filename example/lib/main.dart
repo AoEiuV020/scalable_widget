@@ -47,8 +47,8 @@ class MyHomePage extends StatelessWidget {
                   color: Colors.grey[200],
                   border: Border.all(color: Colors.blue, width: 2),
                 ),
-                child: Image.network(
-                  'https://picsum.photos/1000/1000',
+                child: Image.asset(
+                  'assets/images/example_4252_2835.jpg',
                   fit: BoxFit.cover,
                 ),
               ),
