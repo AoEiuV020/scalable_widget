@@ -12,15 +12,13 @@ class InteractiveViewerDemoPage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('InteractiveViewer演示'),
       ),
-      body: Center(
-        child: InteractiveViewer(
-          clipBehavior: Clip.none,
-          boundaryMargin: const EdgeInsets.all(20.0),
-          minScale: 0.01,
-          maxScale: 40.0,
-          trackpadScrollCausesScale: true,
-          child: const ExampleWidget(),
-        ),
+      body: InteractiveViewer(
+        clipBehavior: Clip.none,
+        boundaryMargin: const EdgeInsets.all(20.0),
+        minScale: 0.01,
+        maxScale: 40.0,
+        trackpadScrollCausesScale: true,
+        child: const ExampleWidget(),
       ),
     );
   }

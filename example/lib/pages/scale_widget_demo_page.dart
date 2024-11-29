@@ -14,10 +14,8 @@ class ScaleWidgetDemoPage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('缩放控件演示'),
       ),
-      body: const Center(
-        child: ScalableWidget(
-          child: ExampleWidget(),
-        ),
+      body: const ScalableWidget(
+        child: ExampleWidget(),
       ),
     );
   }
