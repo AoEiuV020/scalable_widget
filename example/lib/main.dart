@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:scalable_widget/scalable_widget.dart';
+
+import 'example_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,30 +34,10 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('缩放控件演示'),
       ),
-      body: LayoutBuilder(
-        builder: (context, constraints) {
-          // 取可用空间的宽高中的较小值
-          final containerSize = constraints.maxWidth < constraints.maxHeight
-              ? constraints.maxWidth
-              : constraints.maxHeight;
-
-          return Center(
-            child: ScalableWidget(
-              child: Container(
-                width: containerSize,
-                height: containerSize,
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  border: Border.all(color: Colors.blue, width: 2),
-                ),
-                child: Image.asset(
-                  'assets/images/example_4252_2835.jpg',
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-          );
-        },
+      body: const Center(
+        child: ScalableWidget(
+          child: ExampleWidget(),
+        ),
       ),
     );
   }
