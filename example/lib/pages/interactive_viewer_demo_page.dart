@@ -18,6 +18,7 @@ class InteractiveViewerDemoPage extends StatelessWidget {
           boundaryMargin: const EdgeInsets.all(20.0),
           minScale: 0.01,
           maxScale: 40.0,
+          trackpadScrollCausesScale: true,
           child: const ExampleWidget(),
         ),
       ),
