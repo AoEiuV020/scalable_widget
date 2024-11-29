@@ -7,21 +7,26 @@ class ExampleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
+        final size = constraints.biggest;
         // 取可用空间的宽高中的较小值
-        final containerSize = constraints.maxWidth < constraints.maxHeight
-            ? constraints.maxWidth
-            : constraints.maxHeight;
+        final containerSize =
+            size.width < size.height ? size.width : size.height;
 
-        return Container(
-          width: containerSize,
-          height: containerSize,
-          decoration: BoxDecoration(
-            color: Colors.grey[200],
-            border: Border.all(color: Colors.blue, width: 2),
-          ),
-          child: Image.asset(
-            'assets/images/example_4252_2835.jpg',
-            fit: BoxFit.cover,
+        // Center 和 SizedBox 的组合，不会影响父控件的大小，
+        return Center(
+          child: SizedBox(
+            width: containerSize,
+            height: containerSize,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.grey[200],
+                border: Border.all(color: Colors.blue, width: 2),
+              ),
+              child: Image.asset(
+                'assets/images/example_4252_2835.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
         );
       },
